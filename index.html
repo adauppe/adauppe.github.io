@@ -27,7 +27,9 @@
   .hero-contact a:hover{color:var(--gold-light)}
   .hero-contact svg{width:15px;height:15px;opacity:.7}
   .gold-line{width:60px;height:3px;background:var(--gold);border-radius:2px;margin:0 auto 0;position:relative;z-index:1}
-
+  .dl-btn{display:inline-flex;align-items:center;gap:8px;margin-top:28px;padding:12px 28px;background:var(--gold);color:var(--navy);font-family:'Inter',sans-serif;font-size:14px;font-weight:600;letter-spacing:.5px;border-radius:6px;border:none;cursor:pointer;text-decoration:none;transition:background .2s,transform .2s;position:relative;z-index:1}
+  .dl-btn:hover{background:var(--gold-light);transform:translateY(-1px)}
+  .dl-btn svg{width:16px;height:16px}
 
   /* NAV */
   .nav{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
@@ -121,8 +123,20 @@
     </a>
   </div>
   <div class="gold-line"></div>
+  <a class="dl-btn" id="dl-btn" href="#" onclick="downloadResume(); return false;">
+    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Download Resume (PDF)
+  </a>
 </header>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
+function downloadResume(){
+  if(!window.jspdf){
+    alert('Sorry, the PDF generator failed to load (likely a network or ad-blocker issue). Please refresh the page and try again.');
+    return;
+  }
+  const {jsPDF}=window.jspdf;
+  try{
   const doc=new jsPDF({unit:'pt',format:'letter'});
   const navy=[13,27,42],gold=[201,168,76],slate=[74,85,104],light=[247,249,252],border=[226,232,240];
   const W=612,ml=48,mr=48,cw=W-ml-mr;
@@ -259,6 +273,12 @@
   doc.text(sw.join('  •  '),ml,y,{maxWidth:cw});
   y+=20;
 
+  doc.save('Alex_Dauppe_Resume.pdf');
+  } catch(err){
+    console.error('PDF generation failed:', err);
+    alert('Something went wrong while generating the PDF. Please try again or refresh the page.');
+  }
+}
 </script>
 
 <!-- NAV -->
