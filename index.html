@@ -31,6 +31,7 @@
   .dl-btn:hover{background:var(--gold-light);transform:translateY(-1px)}
   .dl-btn svg{width:16px;height:16px}
 
+
   /* NAV */
   .nav{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
   .nav-inner{max-width:900px;margin:0 auto;display:flex;justify-content:center;gap:4px;padding:0 20px}
@@ -123,7 +124,7 @@
     </a>
   </div>
   <div class="gold-line"></div>
-  <a class="dl-btn" id="dl-btn" href="#" onclick="downloadResume(); return false;">
+  <a class="dl-btn" href="#" onclick="downloadResume(); return false;">
     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
     Download Resume (PDF)
   </a>
@@ -273,12 +274,6 @@ function downloadResume(){
   doc.text(sw.join('  •  '),ml,y,{maxWidth:cw});
   y+=20;
 
-  doc.save('Alex_Dauppe_Resume.pdf');
-  } catch(err){
-    console.error('PDF generation failed:', err);
-    alert('Something went wrong while generating the PDF. Please try again or refresh the page.');
-  }
-}
 </script>
 
 <!-- NAV -->
