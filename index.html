@@ -6,118 +6,134 @@
 <title>Alex Dauppe</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
 <style>
-  *{margin:0;padding:0;box-sizing:border-box}
-  :root{
-    --navy:#0d1b2a;--navy-mid:#1b2e45;--navy-light:#24405e;
-    --gold:#c9a84c;--gold-light:#e8c96e;--gold-pale:#fdf6e3;
-    --slate:#4a5568;--mist:#f7f9fc;--white:#ffffff;
-    --text:#1a202c;--text-muted:#718096;--border:#e2e8f0;
-  }
-  body{font-family:'Inter',sans-serif;background:var(--mist);color:var(--text);line-height:1.6}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#0d1b2a;--navy-mid:#1b2e45;--navy-light:#24405e;
+  --gold:#c9a84c;--gold-light:#e8c96e;--gold-pale:#fdf6e3;
+  --slate:#4a5568;--mist:#f7f9fc;--white:#ffffff;
+  --text:#1a202c;--text-muted:#718096;--border:#e2e8f0;
+}
+body{font-family:'Inter',sans-serif;background:var(--mist);color:var(--text);line-height:1.6}
 
-  /* HERO */
-  .hero{background:var(--navy);color:var(--white);padding:80px 0 60px;text-align:center;position:relative;overflow:hidden}
-  .hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:rgba(201,168,76,0.06)}
-  .hero::after{content:'';position:absolute;bottom:-60px;left:-60px;width:300px;height:300px;border-radius:50%;background:rgba(201,168,76,0.05)}
-  .avatar{width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-light));display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:700;color:var(--navy);margin:0 auto 24px;letter-spacing:-1px;position:relative;z-index:1}
-  .hero h1{font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,56px);font-weight:700;letter-spacing:-1px;margin-bottom:8px;position:relative;z-index:1}
-  .hero-title{font-size:16px;color:var(--gold-light);letter-spacing:3px;text-transform:uppercase;font-weight:500;margin-bottom:20px;position:relative;z-index:1}
-  .hero-contact{display:flex;justify-content:center;flex-wrap:wrap;gap:24px;margin-bottom:32px;position:relative;z-index:1}
-  .hero-contact a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:14px;display:flex;align-items:center;gap:6px;transition:color .2s}
-  .hero-contact a:hover{color:var(--gold-light)}
-  .hero-contact svg{width:15px;height:15px;opacity:.7}
-  .gold-line{width:60px;height:3px;background:var(--gold);border-radius:2px;margin:0 auto 0;position:relative;z-index:1}
-  .dl-btn{display:inline-flex;align-items:center;gap:8px;margin-top:28px;padding:12px 28px;background:var(--gold);color:var(--navy);font-family:'Inter',sans-serif;font-size:14px;font-weight:600;letter-spacing:.5px;border-radius:6px;border:none;cursor:pointer;text-decoration:none;transition:background .2s,transform .2s;position:relative;z-index:1}
-  .dl-btn:hover{background:var(--gold-light);transform:translateY(-1px)}
-  .dl-btn svg{width:16px;height:16px}
+/* HERO */
+.hero{background:var(--navy);color:var(--white);padding:80px 0 60px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:rgba(201,168,76,0.06)}
+.hero::after{content:'';position:absolute;bottom:-60px;left:-60px;width:300px;height:300px;border-radius:50%;background:rgba(201,168,76,0.05)}
+.avatar{width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-light));display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:700;color:var(--navy);margin:0 auto 24px;letter-spacing:-1px;position:relative;z-index:1}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,56px);font-weight:700;letter-spacing:-1px;margin-bottom:8px;position:relative;z-index:1}
+.hero-title{font-size:16px;color:var(--gold-light);letter-spacing:3px;text-transform:uppercase;font-weight:500;margin-bottom:20px;position:relative;z-index:1}
+.hero-contact{display:flex;justify-content:center;flex-wrap:wrap;gap:24px;margin-bottom:32px;position:relative;z-index:1}
+.hero-contact a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:14px;display:flex;align-items:center;gap:6px;transition:color .2s}
+.hero-contact a:hover{color:var(--gold-light)}
+.hero-contact svg{width:15px;height:15px;opacity:.7}
+.gold-line{width:60px;height:3px;background:var(--gold);border-radius:2px;margin:0 auto 0;position:relative;z-index:1}
+.dl-btn{display:inline-flex;align-items:center;gap:8px;margin-top:28px;padding:12px 28px;background:var(--gold);color:var(--navy);font-family:'Inter',sans-serif;font-size:14px;font-weight:600;letter-spacing:.5px;border-radius:6px;border:none;cursor:pointer;text-decoration:none;transition:background .2s,transform .2s;position:relative;z-index:1}
+.dl-btn:hover{background:var(--gold-light);transform:translateY(-1px)}
+.dl-btn svg{width:16px;height:16px}
 
+/* NAV */
+.nav{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.nav-inner{max-width:900px;margin:0 auto;display:flex;justify-content:center;gap:4px;padding:0 20px}
+.nav a{display:inline-block;padding:14px 16px;font-size:13px;font-weight:500;color:var(--text-muted);text-decoration:none;letter-spacing:.5px;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+.nav a:hover{color:var(--navy);border-bottom-color:var(--gold)}
 
-  /* NAV */
-  .nav{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
-  .nav-inner{max-width:900px;margin:0 auto;display:flex;justify-content:center;gap:4px;padding:0 20px}
-  .nav a{display:inline-block;padding:14px 16px;font-size:13px;font-weight:500;color:var(--text-muted);text-decoration:none;letter-spacing:.5px;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
-  .nav a:hover{color:var(--navy);border-bottom-color:var(--gold)}
+/* LAYOUT */
+.container{max-width:900px;margin:0 auto;padding:0 20px}
+section{padding:60px 0}
+section+section{border-top:1px solid var(--border)}
 
-  /* LAYOUT */
-  .container{max-width:900px;margin:0 auto;padding:0 20px}
-  section{padding:60px 0}
-  section+section{border-top:1px solid var(--border)}
+/* SECTION HEADERS */
+.section-label{display:flex;align-items:center;gap:12px;margin-bottom:36px}
+.section-label span{font-size:11px;font-weight:600;color:var(--gold);letter-spacing:3px;text-transform:uppercase}
+.section-label::after{content:'';flex:1;height:1px;background:var(--border)}
 
-  /* SECTION HEADERS */
-  .section-label{display:flex;align-items:center;gap:12px;margin-bottom:36px}
-  .section-label span{font-size:11px;font-weight:600;color:var(--gold);letter-spacing:3px;text-transform:uppercase}
-  .section-label::after{content:'';flex:1;height:1px;background:var(--border)}
-  h2.section-title{font-family:'Playfair Display',serif;font-size:30px;color:var(--navy);margin-bottom:8px}
+/* OBJECTIVE */
+.objective-card{background:var(--white);border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:8px;padding:28px 32px;font-size:16px;line-height:1.8;color:var(--slate)}
 
-  /* OBJECTIVE */
-  .objective-card{background:var(--white);border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:8px;padding:28px 32px;font-size:16px;line-height:1.8;color:var(--slate)}
+/* SKILLS GRID */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+.skill-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:20px;text-align:center;transition:box-shadow .2s,transform .2s}
+.skill-card:hover{box-shadow:0 6px 24px rgba(0,0,0,0.08);transform:translateY(-2px)}
+.skill-icon{width:42px;height:42px;border-radius:10px;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
+.skill-icon svg{width:22px;height:22px;color:var(--gold-light)}
+.skill-card p{font-size:13px;font-weight:600;color:var(--navy);margin-bottom:4px}
+.skill-card small{font-size:12px;color:var(--text-muted)}
 
-  /* SKILLS GRID */
-  .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
-  .skill-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:20px;text-align:center;transition:box-shadow .2s,transform .2s}
-  .skill-card:hover{box-shadow:0 6px 24px rgba(0,0,0,0.08);transform:translateY(-2px)}
-  .skill-icon{width:42px;height:42px;border-radius:10px;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
-  .skill-icon svg{width:22px;height:22px;color:var(--gold-light)}
-  .skill-card p{font-size:13px;font-weight:600;color:var(--navy);margin-bottom:4px}
-  .skill-card small{font-size:12px;color:var(--text-muted)}
+/* TIMELINE */
+.timeline{position:relative;padding-left:28px}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--border)}
+.timeline-item{position:relative;margin-bottom:44px}
+.timeline-item:last-child{margin-bottom:0}
+.timeline-dot{position:absolute;left:-28px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--white);border:3px solid var(--gold);z-index:1}
+.job-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:24px 28px}
+.job-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:4px}
+.job-title{font-size:17px;font-weight:600;color:var(--navy)}
+.job-dates{font-size:12px;font-weight:500;color:var(--gold);background:var(--gold-pale);padding:4px 12px;border-radius:20px;white-space:nowrap}
+.job-company{font-size:14px;font-weight:500;color:var(--text-muted);margin-bottom:4px}
+.job-group{font-size:13px;color:var(--text-muted);margin-bottom:16px;font-style:italic}
+.job-bullets{list-style:none;padding:0}
+.job-bullets li{font-size:14px;color:var(--slate);padding:5px 0 5px 18px;position:relative;line-height:1.6}
+.job-bullets li::before{content:'›';position:absolute;left:0;color:var(--gold);font-size:18px;line-height:1.3;font-weight:600}
+.tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding-top:14px;border-top:1px solid var(--border)}
+.tag{font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;background:#eef2ff;color:#3730a3}
 
-  /* TIMELINE */
-  .timeline{position:relative;padding-left:28px}
-  .timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--border)}
-  .timeline-item{position:relative;margin-bottom:44px}
-  .timeline-item:last-child{margin-bottom:0}
-  .timeline-dot{position:absolute;left:-28px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--white);border:3px solid var(--gold);z-index:1}
-  .job-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:24px 28px}
-  .job-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:4px}
-  .job-title{font-size:17px;font-weight:600;color:var(--navy)}
-  .job-dates{font-size:12px;font-weight:500;color:var(--gold);background:var(--gold-pale);padding:4px 12px;border-radius:20px;white-space:nowrap}
-  .job-company{font-size:14px;font-weight:500;color:var(--text-muted);margin-bottom:4px}
-  .job-group{font-size:13px;color:var(--text-muted);margin-bottom:16px;font-style:italic}
-  .job-bullets{list-style:none;padding:0}
-  .job-bullets li{font-size:14px;color:var(--slate);padding:5px 0 5px 18px;position:relative;line-height:1.6}
-  .job-bullets li::before{content:'›';position:absolute;left:0;color:var(--gold);font-size:18px;line-height:1.3;font-weight:600}
-  .tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding-top:14px;border-top:1px solid var(--border)}
-  .tag{font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;background:#eef2ff;color:#3730a3}
+/* EDUCATION */
+.edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.edu-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:24px;position:relative;overflow:hidden}
+.edu-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--gold-light))}
+.edu-degree{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:4px}
+.edu-school{font-size:14px;color:var(--text-muted);margin-bottom:8px}
+.edu-year{display:inline-block;font-size:12px;font-weight:500;color:var(--gold);background:var(--gold-pale);padding:3px 10px;border-radius:20px}
 
-  /* EDUCATION */
-  .edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-  .edu-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:24px;position:relative;overflow:hidden}
-  .edu-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--gold-light))}
-  .edu-degree{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:4px}
-  .edu-school{font-size:14px;color:var(--text-muted);margin-bottom:8px}
-  .edu-year{display:inline-block;font-size:12px;font-weight:500;color:var(--gold);background:var(--gold-pale);padding:3px 10px;border-radius:20px}
+/* COURSEWORK */
+.course-tags{display:flex;flex-wrap:wrap;gap:10px}
+.course-tag{font-size:13px;padding:8px 16px;border-radius:8px;background:var(--white);border:1px solid var(--border);color:var(--slate);font-weight:500}
 
-  /* COURSEWORK */
-  .course-tags{display:flex;flex-wrap:wrap;gap:10px}
-  .course-tag{font-size:13px;padding:8px 16px;border-radius:8px;background:var(--white);border:1px solid var(--border);color:var(--slate);font-weight:500}
+/* SOFTWARE */
+.software-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}
+.sw-item{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:13px;font-weight:500;color:var(--navy);text-align:center}
 
-  /* SOFTWARE */
-  .software-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}
-  .sw-item{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:13px;font-weight:500;color:var(--navy);text-align:center}
+/* PRINT OVERLAY */
+#print-overlay{display:none;position:fixed;inset:0;background:rgba(13,27,42,0.85);z-index:999;align-items:center;justify-content:center;padding:20px}
+#print-overlay.active{display:flex}
+.print-box{background:#fff;border-radius:12px;padding:36px 40px;max-width:480px;width:100%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
+.print-box h3{font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);margin-bottom:10px}
+.print-box p{font-size:14px;color:var(--slate);line-height:1.7;margin-bottom:20px}
+.print-steps{text-align:left;background:var(--mist);border-radius:8px;padding:16px 20px;margin-bottom:24px;font-size:13px;color:var(--slate);line-height:2.2}
+.print-steps b{color:var(--navy)}
+.print-btn{display:inline-block;padding:12px 28px;background:var(--gold);color:var(--navy);font-weight:600;font-size:14px;border-radius:6px;border:none;cursor:pointer;margin-right:10px;transition:background .2s}
+.print-btn:hover{background:var(--gold-light)}
+.close-btn{display:inline-block;padding:12px 20px;background:transparent;color:var(--text-muted);font-size:14px;border:1px solid var(--border);border-radius:6px;cursor:pointer;transition:background .2s}
+.close-btn:hover{background:var(--mist)}
 
-  /* FOOTER */
-  footer{background:var(--navy);color:rgba(255,255,255,0.5);text-align:center;padding:32px 20px;font-size:13px}
-  footer a{color:var(--gold-light);text-decoration:none}
+/* FOOTER */
+footer{background:var(--navy);color:rgba(255,255,255,0.5);text-align:center;padding:32px 20px;font-size:13px}
+footer a{color:var(--gold-light);text-decoration:none}
 
-  /* PRINT OVERLAY */
-  #print-overlay{display:none;position:fixed;inset:0;background:rgba(13,27,42,0.85);z-index:999;align-items:center;justify-content:center;padding:20px}
-  .print-box{background:#fff;border-radius:12px;padding:36px 40px;max-width:480px;width:100%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
-  .print-box h3{font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);margin-bottom:10px}
-  .print-box p{font-size:14px;color:var(--slate);line-height:1.7;margin-bottom:20px}
-  .print-steps{text-align:left;background:var(--mist);border-radius:8px;padding:16px 20px;margin-bottom:24px;font-size:13px;color:var(--slate);line-height:2}
-  .print-steps b{color:var(--navy)}
-  .print-btn{display:inline-block;padding:12px 28px;background:var(--gold);color:var(--navy);font-weight:600;font-size:14px;border-radius:6px;border:none;cursor:pointer;margin-right:10px;transition:background .2s}
-  .print-btn:hover{background:var(--gold-light)}
-  .close-btn{display:inline-block;padding:12px 20px;background:transparent;color:var(--text-muted);font-size:14px;border:1px solid var(--border);border-radius:6px;cursor:pointer;transition:background .2s}
-  .close-btn:hover{background:var(--mist)}
-  @media(max-width:600px){
-    .hero{padding:60px 20px 40px}
-    .job-header{flex-direction:column}
-    .nav a{padding:12px 10px;font-size:12px}
-  }
+@media(max-width:600px){
+  .hero{padding:60px 20px 40px}
+  .job-header{flex-direction:column}
+  .nav a{padding:12px 10px;font-size:12px}
+  .print-box{padding:28px 20px}
+}
 </style>
 </head>
 <body>
+
+<!-- PRINT OVERLAY -->
+<div id="print-overlay">
+  <div class="print-box">
+    <h3>Save Resume as PDF</h3>
+    <p>Use your browser's built-in print function to save a clean PDF copy of the resume.</p>
+    <div class="print-steps">
+      <div><b>Step 1</b> — Click "Open Print Dialog" below</div>
+      <div><b>Step 2</b> — Set Destination to <b>"Save as PDF"</b></div>
+      <div><b>Step 3</b> — Click <b>Save</b></div>
+    </div>
+    <button class="print-btn" onclick="window.print()">Open Print Dialog</button>
+    <button class="close-btn" onclick="document.getElementById('print-overlay').classList.remove('active')">Cancel</button>
+  </div>
+</div>
 
 <!-- HERO -->
 <header class="hero">
@@ -135,157 +151,11 @@
     </a>
   </div>
   <div class="gold-line"></div>
-  <a class="dl-btn" href="#" onclick="downloadResume(); return false;">
+  <button class="dl-btn" onclick="document.getElementById('print-overlay').classList.add('active')">
     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
     Download Resume (PDF)
-  </a>
+  </button>
 </header>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script>
-function downloadResume(){
-  if(!window.jspdf){
-    alert('Sorry, the PDF generator failed to load (likely a network or ad-blocker issue). Please refresh the page and try again.');
-    return;
-  }
-  const {jsPDF}=window.jspdf;
-  try{
-  const doc=new jsPDF({unit:'pt',format:'letter'});
-  const navy=[13,27,42],gold=[201,168,76],slate=[74,85,104],light=[247,249,252],border=[226,232,240];
-  const W=612,ml=48,mr=48,cw=W-ml-mr;
-
-  // Header bg
-  doc.setFillColor(...navy);
-  doc.rect(0,0,W,110,'F');
-
-  // Name
-  doc.setFont('helvetica','bold');
-  doc.setFontSize(28);
-  doc.setTextColor(255,255,255);
-  doc.text('Alex Dauppe',W/2,44,{align:'center'});
-
-  // Title
-  doc.setFontSize(10);
-  doc.setTextColor(...gold);
-  doc.text('SENIOR RISK MANAGEMENT PROFESSIONAL',W/2,60,{align:'center'});
-
-  // Contact
-  doc.setFontSize(9);
-  doc.setTextColor(200,210,220);
-  doc.text('adauppe@gmail.com  •  (716) 228-4194  •  Charlotte, NC',W/2,78,{align:'center'});
-
-  // Gold line
-  doc.setDrawColor(...gold);
-  doc.setLineWidth(2);
-  doc.line(W/2-30,88,W/2+30,88);
-
-  let y=130;
-
-  function sectionHead(title){
-    doc.setFontSize(8);
-    doc.setFont('helvetica','bold');
-    doc.setTextColor(...gold);
-    doc.text(title.toUpperCase(),ml,y);
-    doc.setDrawColor(...border);
-    doc.setLineWidth(0.5);
-    doc.line(ml+doc.getTextWidth(title.toUpperCase())+8,y-3,W-mr,y-3);
-    y+=14;
-  }
-
-  function bodyText(txt,indent,maxW){
-    doc.setFontSize(9);
-    doc.setFont('helvetica','normal');
-    doc.setTextColor(...slate);
-    const lines=doc.splitTextToSize(txt,maxW||cw-indent);
-    doc.text(lines,ml+indent,y);
-    y+=lines.length*13;
-  }
-
-  function jobEntry(title,company,group,dates,bullets,tags){
-    if(y>670){doc.addPage();y=48;}
-    // Card bg
-    doc.setFillColor(250,251,253);
-    doc.setDrawColor(...border);
-    doc.setLineWidth(0.5);
-    const bh=28+bullets.length*13+16;
-    doc.roundedRect(ml,y-2,cw,bh,4,4,'FD');
-    // Title + dates
-    doc.setFont('helvetica','bold');
-    doc.setFontSize(11);
-    doc.setTextColor(...navy);
-    doc.text(title,ml+10,y+12);
-    doc.setFontSize(8);
-    doc.setTextColor(...gold);
-    doc.text(dates,W-mr-10,y+12,{align:'right'});
-    // Company
-    doc.setFont('helvetica','normal');
-    doc.setFontSize(9);
-    doc.setTextColor(...slate);
-    doc.text(company+(group?' — '+group:''),ml+10,y+24);
-    y+=32;
-    bullets.forEach(b=>{
-      doc.setTextColor(...gold);doc.setFontSize(11);doc.text('›',ml+10,y);
-      doc.setTextColor(...slate);doc.setFontSize(9);
-      const ls=doc.splitTextToSize(b,cw-32);
-      doc.text(ls,ml+22,y);
-      y+=ls.length*13;
-    });
-    y+=10;
-  }
-
-  // ABOUT
-  sectionHead('About');
-  bodyText('Results-driven risk management professional with 10+ years of experience across counterparty credit risk, financial institution risk, and balance sheet operations at leading financial institutions. Known for building robust monitoring and reporting frameworks and delivering actionable insights to senior management and regulators.',0);
-  y+=10;
-
-  // EXPERIENCE
-  sectionHead('Experience');
-  jobEntry('Senior Market Risk Specialist','Wells Fargo — Market & Counterparty Risk Management','ECRM','Feb 2019 – Jun 2025',[
-    'Managed notable exception limit monitoring reporting process disseminated to Top of House Senior Management',
-    'Led unapproved excess review process, forming a technical working group for timely identification and remediation',
-    'Delivered peer-firm benchmarking of end-to-end CPCR limit monitoring processes',
-    'Produced COVID-19 stress reporting using SARS economic fallout as a proxy at pandemic onset',
-    'Participated in MCRM Climate Change Working Group; coordinated quarterly FRB SCOOS regulatory survey submissions',
-  ]);
-  jobEntry('Intermediate Associate Credit & Portfolio Analyst — Officer','Citigroup — Risk','Financial Institution Risk Management (FRIM)','Aug 2015 – Apr 2017',[
-    'Monitored limit exceptions for Broker/Dealer and Municipal industries across OTC Derivatives, FX, Fixed Income, and Structured Products',
-    'Produced monthly Hedge Fund Portfolio Management Report and Stress Testing Report incorporating 18 scenarios',
-    'Built Access database for ICG credit approval metrics; developed automated quarterly scorecard for senior management',
-  ]);
-  jobEntry('Financial Accounting Analyst 2','Citigroup — Finance','Balance Sheet Substantiation','Jul 2013 – Aug 2015',[
-    'Owned monthly reconciliation of 2,000+ balance sheet accounts including systemic GL/SL reconciliations for derivative balances',
-    'Identified and remediated B/S discrepancies; created audit packages; trained new hires',
-  ]);
-  jobEntry('Operations Specialist 2','First Niagara Bank — IRA/HSA Administration','','May 2012 – Jul 2013',[
-    'Administered IRA/HSA accounts; remitted IRS withholding bi-weekly; handled B and C notices',
-    'Researched mandatory state withholding tax rates across operating footprint, producing bank-wide reference documentation',
-  ]);
-  jobEntry('Banker','Citizens Bank — Retail Banking','','May 2011 – May 2012',[
-    'Consistently exceeded quarterly sales baselines; served as designated ATM Custodian',
-  ]);
-
-  // EDUCATION
-  if(y>680){doc.addPage();y=48;}
-  sectionHead('Education');
-  doc.setFont('helvetica','bold');doc.setFontSize(10);doc.setTextColor(...navy);
-  doc.text('Master of Business Administration',ml,y);
-  doc.setFont('helvetica','normal');doc.setFontSize(9);doc.setTextColor(...slate);
-  doc.text('Canisius College · Buffalo, NY · 2017',ml,y+12);
-  y+=28;
-  doc.setFont('helvetica','bold');doc.setFontSize(10);doc.setTextColor(...navy);
-  doc.text('B.S. in Management — Supply Chain',ml,y);
-  doc.setFont('helvetica','normal');doc.setFontSize(9);doc.setTextColor(...slate);
-  doc.text('Niagara University · Lewiston, NY · 2010',ml,y+12);
-  y+=28;
-
-  // SOFTWARE
-  if(y>680){doc.addPage();y=48;}
-  sectionHead('Software Proficiencies');
-  const sw=['Microsoft Excel','Microsoft Access','SQL Server Mgmt Studio','Tableau','Bloomberg','SAP Business Objects','PowerPoint','Visio','Recon Frontier'];
-  doc.setFontSize(9);doc.setFont('helvetica','normal');doc.setTextColor(...slate);
-  doc.text(sw.join('  •  '),ml,y,{maxWidth:cw});
-  y+=20;
-
-</script>
 
 <!-- NAV -->
 <nav class="nav">
@@ -297,21 +167,6 @@ function downloadResume(){
     <a href="#software">Software</a>
   </div>
 </nav>
-
-<!-- PRINT OVERLAY -->
-<div id="print-overlay">
-  <div class="print-box">
-    <h3>Save as PDF</h3>
-    <p>Your browser's built-in print function is the most reliable way to save this resume as a PDF. Here's how:</p>
-    <div class="print-steps">
-      <div><b>Step 1</b> — Press <b>Ctrl+P</b> (Windows) or <b>⌘+P</b> (Mac)</div>
-      <div><b>Step 2</b> — Set Destination to <b>"Save as PDF"</b></div>
-      <div><b>Step 3</b> — Click <b>Save</b></div>
-    </div>
-    <button class="print-btn" onclick="window.print()">Open Print Dialog</button>
-    <button class="close-btn" onclick="closeOverlay()">Cancel</button>
-  </div>
-</div>
 
 <main>
 
@@ -382,7 +237,6 @@ function downloadResume(){
     <div class="section-label"><span>Experience</span></div>
     <div class="timeline">
 
-      <!-- Wells Fargo -->
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="job-card">
@@ -416,7 +270,6 @@ function downloadResume(){
         </div>
       </div>
 
-      <!-- Citigroup FRIM -->
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="job-card">
@@ -445,7 +298,6 @@ function downloadResume(){
         </div>
       </div>
 
-      <!-- Citigroup BSS -->
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="job-card">
@@ -471,7 +323,6 @@ function downloadResume(){
         </div>
       </div>
 
-      <!-- First Niagara -->
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="job-card">
@@ -496,7 +347,6 @@ function downloadResume(){
         </div>
       </div>
 
-      <!-- Citizens Bank -->
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="job-card">
